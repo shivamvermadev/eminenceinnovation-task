@@ -1,0 +1,186 @@
+{
+  "info": {
+    "_postman_id": "35b31908-e12e-4a26-8def-0feda005dffe",
+    "name": "Task",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "29922553"
+  },
+  "item": [
+    {
+      "name": "register_user",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"user\",\n    \"password\": \"user_password\",\n    \"role\": \"ROLE_USER\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "register_admin",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin_password\",\n    \"role\": \"ROLE_ADMIN\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "authenticate-user",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"user\",\n    \"password\": \"user_password\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/authenticate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "authenticate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "authenticate-admin",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin_password\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/authenticate",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "authenticate"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "decode-jwt",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzQWRtaW4iOnRydWUsImV4cCI6MTcxNDIxNzA1MSwiaWF0IjoxNzE0MjE2NDUxfQ.yBaJ_5gBcuDir7VXU-DwQ4-Vsf4LkC1I2HBrqdoV580Kkg137z0-4wUNRNgJ7yCJ1KUmUDTeAnK-0rYMems9gA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/decode-jwt",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "decode-jwt"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "draw-matches",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaXNVc2VyIjp0cnVlLCJleHAiOjE3MTQyMTcwNDAsImlhdCI6MTcxNDIxNjQ0MH0.0KOsmsMLNQv2XbI3w-e2Nmf3q5Dppv-Aqvi12G4VL4GovZAXBcce2IF7pqOy4i0TMwuhYEAmwUNCSEUjTSpiUQ",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/draw-matches?year=2013",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "draw-matches"
+          ],
+          "query": [
+            {
+              "key": "year",
+              "value": "2013"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
