@@ -1,4 +1,4 @@
-package com.eminenceinnovation.task;
+package com.eminenceinnovation.task.service;
 
 import com.eminenceinnovation.task.model.FootballDTO;
 import com.eminenceinnovation.task.model.MatchInfo;

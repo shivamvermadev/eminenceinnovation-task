@@ -1,11 +1,10 @@
 package com.eminenceinnovation.task.controller;
 
-import com.eminenceinnovation.task.MainService;
+import com.eminenceinnovation.task.service.MainService;
 import com.eminenceinnovation.task.config.CustomUserDetailsService;
 import com.eminenceinnovation.task.config.JwtUtil;
 import com.eminenceinnovation.task.model.AuthenticationRequest;
 import com.eminenceinnovation.task.model.AuthenticationResponse;
-import com.eminenceinnovation.task.model.FootballDTO;
 import com.eminenceinnovation.task.model.MatchInfo;
 import com.eminenceinnovation.task.model.Payload;
 import com.eminenceinnovation.task.model.PayloadDTO;
